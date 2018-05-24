@@ -1,5 +1,11 @@
 <h2>Name: <%= @cocktail.name %></h2>
+
 <p>Ingredients: <%= @cocktail.ingredients %></p>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+
+  <%= f.submit "add a cocktail", class: "btn btn-primary" %>
+<% end %>
 
 <%= link_to "Back to List", cocktails_path,  class: "btn btn-primary" %>
 
