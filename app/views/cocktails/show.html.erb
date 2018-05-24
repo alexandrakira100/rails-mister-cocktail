@@ -1,0 +1,6 @@
+<h2>Name: <%= @cocktail.name %></h2>
+<p>Ingredients: <%= @cocktail.ingredients %></p>
+
+<%= link_to "Back to List", cocktails_path,  class: "btn btn-primary" %>
+
+<%= link_to "DELETE", cocktail_path(@cocktail), method: :delete, data: {confirm: "are you sure?"} %>
