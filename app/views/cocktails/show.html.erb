@@ -1,11 +1,12 @@
 <div class="container">
  <div class="row">
    <h1><%= @cocktail.name %></h1>
-   <h4>Indegrients</h4>
+   <h4>Ingredients</h4>
    <div class="thumbnail col-lg-8">
     <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
    </div>
-   <%= link_to "Add dose",  new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+   <%= link_to "Add dose",  new_cocktail_dose_path(@cocktail) %>
+   <%= link_to "Back",  root_path(@cocktail) %>
    <ul class="list-group">
      <% @cocktail.doses.each do |dose| %>
 
